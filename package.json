@@ -1,0 +1,22 @@
+{
+  "name": "proyecto-api",
+  "version": "1.0.0",
+  "description": "Proyecto-con-apis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gri-espindola/buscadordegift.git"
+  },
+  "author": "Griselda Espindola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gri-espindola/buscadordegift/issues"
+  },
+  "homepage": "https://github.com/gri-espindola/buscadordegift#readme",
+  "dependencies": {
+    "sass": "^1.45.0"
+  }
+}
