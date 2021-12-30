@@ -18,8 +18,8 @@ const crearTarjetasGift = (data) =>{
   const htmlGift = data.reduce ((acc,curr,index) =>{  
     return acc + `
   <article class="gift-card">
-  <h2>${data[index].title}</h2>
-  <img src="${data[index].images.fixed_height.url}" alt="gift">
+  <h2 class="titulo-card">${data[index].title}</h2>
+  <img class="img-gift" src="${data[index].images.fixed_height.url}" alt="gift">
   </article>
   `
   },"")

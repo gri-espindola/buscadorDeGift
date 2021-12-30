@@ -1,12 +1,36 @@
-#gift {
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.formulario-de-busqueda {
+  background-color: purple;
+}
+
+.container-gift {
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  background-color: pink;
 }
 
 .gift-card {
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 7px;
+  background-color: plum;
+}
+.gift-card .titulo-card {
+  font-size: 15px;
+  font-family: comfortaa;
+}
+.gift-card .img-gift {
+  width: 300px;
+  height: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */
