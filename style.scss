@@ -2,7 +2,9 @@ $tipografia-general: raleway;
 $tipografia-card: comfortaa;
 $tipografia-introduccion: indie flower;
 $color-nav: #F1A095;
+$color-input: #ECEFF1;
 $imagen-intro: url(./imagenes/pngtree-hot-air-balloon-purple-cloud-paper-cut-rainbow-meteor-background-image_315910.jpg);
+$imagen-logo: url(./imagenes/GIF\ Grande-01.png);
 
 body {
     box-sizing: border-box;
@@ -18,8 +20,10 @@ body {
     align-items: center;
     padding: 10px;
     .nav-logo {
-        text-align: left;
-        font-family: $tipografia-general;
+        text-align: left;        
+        .imagen-logo{
+            width: 100px;
+        }
     }
     .nav-opciones{
         display:block;
@@ -54,16 +58,53 @@ body {
     align-items: center;
     background-color: purple;
     height: 150px;
-    .input-busqueda{
+    .box-busqueda{
+        display: flex;
+        justify-content: left;
+        align-items: center;
         width: 80%;
-        height: 30%;
-        background-color: #ECEFF1;
+        height: 31%;
+        background-color: $color-input ;
+        border: 2px black solid;
+        border-top-left-radius: 50px;    
+        border-bottom-left-radius: 50px;
+        .input-busqueda{
+            border: none;
+            background-color: $color-input;
+            width: 100%;
+        }
+        #nav.icon{
+            color: blue;
+            font-size: 80px;
+        }
     }
     .boton-buscar{
         margin: 0px 0px 0px -1px;
+        width: 6%;
+        height: 33%;
+        border: 2px black solid;
+        border-top-right-radius: 50px;    
+        border-bottom-right-radius: 50px;
     }
 
 }
+
+
+.section-busquedas-populares{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: lightslategray;
+    .tittle-busquedas-populares{
+        font-family: $tipografia-general;
+        font-size: 30px;
+    }
+    .populares{
+        padding: 100px;
+    }
+}
+
+
 .container-gift {
     display: flex;  
     align-items: center;

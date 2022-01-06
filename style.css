@@ -13,7 +13,9 @@ body {
 }
 .nav-bar .nav-logo {
   text-align: left;
-  font-family: raleway;
+}
+.nav-bar .nav-logo .imagen-logo {
+  width: 100px;
 }
 .nav-bar .nav-opciones {
   display: block;
@@ -47,13 +49,47 @@ body {
   background-color: purple;
   height: 150px;
 }
-.formulario-de-busqueda .input-busqueda {
+.formulario-de-busqueda .box-busqueda {
+  display: flex;
+  justify-content: left;
+  align-items: center;
   width: 80%;
-  height: 30%;
+  height: 31%;
   background-color: #ECEFF1;
+  border: 2px black solid;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.formulario-de-busqueda .box-busqueda .input-busqueda {
+  border: none;
+  background-color: #ECEFF1;
+  width: 100%;
+}
+.formulario-de-busqueda .box-busqueda #nav.icon {
+  color: blue;
+  font-size: 80px;
 }
 .formulario-de-busqueda .boton-buscar {
   margin: 0px 0px 0px -1px;
+  width: 6%;
+  height: 33%;
+  border: 2px black solid;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.section-busquedas-populares {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-color: lightslategray;
+}
+.section-busquedas-populares .tittle-busquedas-populares {
+  font-family: raleway;
+  font-size: 30px;
+}
+.section-busquedas-populares .populares {
+  padding: 100px;
 }
 
 .container-gift {

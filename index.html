@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
@@ -20,12 +22,12 @@
 <body>
 
     <nav class="nav-bar">
-        <div class="nav-logo">
-            Logo
-        </div>
+        <figure class="nav-logo">
+            <img src="./imagenes/GIF Grande-01.png" alt="Imagen del logo" class="imagen-logo">
+        </figure>
         <div class="nav-opciones">
             <a href="" class="opciones">Inicio</a>
-            <a href="" class="opciones">Categorias populares</a>
+            <a href="" class="opciones">Graciosos</a>
             <a href="" class="opciones">Gift populares</a>   
         </div>
     </nav>
@@ -36,9 +38,32 @@
     </div>
 
     <form action="" id="form-busqueda-gift" class="formulario-de-busqueda">
-        <input type="text" id="input-buscador" value="" placeholder="Introduce término de búsqueda" class="input-busqueda">
+        <div class="box-busqueda">
+            <i class="fas fa-search" id="nav-icon"></i>
+            <input type="text" id="input-buscador" value="" placeholder="Introduce un término de búsqueda" class="input-busqueda">
+        </div>
         <button id="buscador" class="boton-buscar">buscar</button>
-    </form>    
+    </form>
+    <section class="section-busquedas-populares">
+        <h4 class="tittle-busquedas-populares">Búsquedas populares</h4>
+        <div class="box-opciones-populares">
+            <span class="populares">
+                <a href="">Gatos</a>
+            </span>
+            <span class="populares">
+                <a href="">Perros</a>
+            </span>
+            <span class="populares">
+                <a href="">Spider Man</a>
+            </span>
+            <span class="populares">
+                <a href="">Avengers</a>
+            </span>
+            <span class="populares">
+                <a href="">Amor</a>
+            </span>
+        </div>
+    </section>
     <div id="gift" class="container-gift">
         
     </div>
