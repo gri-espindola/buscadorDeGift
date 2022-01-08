@@ -4,42 +4,41 @@ body {
   padding: 0px;
 }
 
-.nav-bar {
+.div-introduccion {
   display: flex;
-  background-color: #CAE9EB;
-  height: 100px;
+  background-image: url(./imagenes/nubesPink.jpg);
+  width: 100%;
+  height: 350px;
+  justify-content: center;
+  flex-direction: column;
+}
+.div-introduccion .nav-bar {
+  display: flex;
   align-items: center;
   padding: 10px;
 }
-.nav-bar .nav-logo {
+.div-introduccion .nav-bar .nav-logo {
   text-align: left;
 }
-.nav-bar .nav-logo .imagen-logo {
+.div-introduccion .nav-bar .nav-logo .imagen-logo {
   width: 100px;
 }
-.nav-bar .nav-opciones {
+.div-introduccion .nav-bar .nav-opciones {
   display: block;
   margin-inline-start: auto;
   font-family: raleway;
   font-size: 20px;
 }
-.nav-bar .nav-opciones .opciones {
+.div-introduccion .nav-bar .nav-opciones .opciones {
   margin: 5px;
   text-decoration: none;
-}
-
-.div-introduccion {
-  display: flex;
-  background-image: url(./imagenes/pngtree-hot-air-balloon-purple-cloud-paper-cut-rainbow-meteor-background-image_315910.jpg);
-  width: 100%;
-  height: 200px;
-  justify-content: center;
+  color: #c60055;
 }
 .div-introduccion .p-introduccion {
   margin: auto;
   font-family: indie flower;
-  font-size: 40px;
-  box-shadow: yellowgreen;
+  font-size: 45px;
+  color: #c60055;
 }
 
 .formulario-de-busqueda {
@@ -60,14 +59,19 @@ body {
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
+.formulario-de-busqueda .box-busqueda .tittle-busquedas-populares {
+  font-size: 35px;
+  font-family: comfortaa;
+}
+.formulario-de-busqueda .box-busqueda #nav-icon {
+  padding-left: 15px;
+}
 .formulario-de-busqueda .box-busqueda .input-busqueda {
+  padding-left: 15px;
+  font-family: comfortaa;
   border: none;
   background-color: white;
   width: 100%;
-}
-.formulario-de-busqueda .box-busqueda #nav.icon {
-  color: blue;
-  font-size: 80px;
 }
 .formulario-de-busqueda .boton-buscar {
   background-color: #F8B8D3;
@@ -77,24 +81,33 @@ body {
   border: 2px black solid;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
+  font-family: comfortaa;
 }
 
 .section-busquedas-populares {
   display: flex;
   text-align: center;
   flex-direction: column;
-  background-image: url(./imagenes/fondo-degradado-cielo-pastel_23-2148897010.jpg);
+  height: 280px;
+  background-image: url(./imagenes/giftGamer.gif);
 }
 .section-busquedas-populares .tittle-busquedas-populares {
   font-family: raleway;
   font-size: 30px;
 }
 .section-busquedas-populares .box-opciones-populares {
-  padding-bottom: 30px;
-  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 180px;
 }
 .section-busquedas-populares .box-opciones-populares .populares {
-  padding: 10px;
+  padding: 30px 60px 30px 60px;
+}
+.section-busquedas-populares .box-opciones-populares .populares .link-busqueda {
+  text-decoration: none;
+  font-family: comfortaa;
+  font-size: 20px;
 }
 
 .container-gift {
@@ -102,7 +115,8 @@ body {
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  background-color: pink;
+  background-color: #FBDFEB;
+  padding: 40px;
 }
 
 .gift-card {
