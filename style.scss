@@ -59,35 +59,37 @@ body {
     align-items: center;
     background-color: $color-fondo-neutral;
     height: 150px;
-    .box-busqueda{
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        width: 80%;
-        height: 31%;
-        background-color: $color-input ;
-        border: 2px black solid;
-        border-top-left-radius: 50px;    
-        border-bottom-left-radius: 50px;
         .tittle-busquedas-populares{
             font-size: 35px;
             font-family: $tipografia-card;
         }
+    .box-busqueda{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+            
         #nav-icon{
-            padding-left: 15px;
+            font-size: 20px;
+            padding-right: 30px;
         }
         .input-busqueda{
             padding-left: 15px;
             font-family: $tipografia-card;
-            border: none;
             background-color: $color-input;
-            width: 100%;
+            width: 70vw;
+            height: 7vh;
+            background-color: $color-input ;
+            border: 2px black solid;
+            border-top-left-radius: 50px;    
+            border-bottom-left-radius: 50px;
+            
         }
-    }
+    }    
+    
     .boton-buscar{
         background-color: #F8B8D3;
         margin: 0px 0px 0px -1px;
-        width: 6%;
+        width: 10%;
         height: 33%;
         border: 2px black solid;
         border-top-right-radius: 50px;    
