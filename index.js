@@ -5,16 +5,16 @@ const inputBuscador = document.getElementById ("input-buscador");
 const buscador = document.getElementById ("buscador");
 let valueInputBusqueda = "";
 const giftBuscado = document.getElementById("gif-buscado");
-const linkGatitos = document.getElementById("link-gatitos");
-const linkPerritos = document.getElementById ("link-perritos");
-const linkSpiderMan = document.getElementById ("link-spiderman");
-const linkAvengers = document.getElementById ("link-avengers");
-const linkAmor = document.getElementById ("link-amor");
-const cardGatitos= document.getElementById ("card-gatitos");
-const cardPerritos = document.getElementById("card- perritos");
-const cardSpiderMan = document.getElementById("card-spiderman");
-const cardAvengers = document.getElementById("card-avengers");
-const cardAmor = document.getElementById("card-amor");
+const linkGatitos = document.querySelector(".link-gatitos");
+const linkPerritos = document.querySelector(".link-perritos");
+const linkSpiderMan = document.querySelector(".link-spiderman");
+const linkAvengers = document.querySelector(".link-avengers");
+const linkAmor = document.querySelector(".link-amor");
+const cardGatitos= document.querySelector(".card-gatitos");
+const cardPerritos = document.querySelector(".card- perritos");
+const cardSpiderMan = document.querySelector(".card-spiderman");
+const cardAvengers = document.querySelector(".card-avengers");
+const cardAmor = document.querySelector(".card-amor");
 
 
 
@@ -48,13 +48,13 @@ formBusquedaGif.onsubmit = (e) =>{
 } 
 
 //Sección Busquedas populares
-
+/* 
 cardGatitos.style.display = "none";
 cardPerritos.style.display = "none";
 cardSpiderMan.style.display = "none";
 cardAvengers.style.display = "none";
 cardAmor.style.display = "none";
-
+ */
 //Sección gatitos
 
 const ferchAGatitos = () =>{
@@ -79,19 +79,18 @@ const gatitosAHtml = (data) =>{
     return reduceADataGatitos;
   }
 
-  const llamandoBusquedaGatitos = () =>{
-    linkGatitos.addEventListener ('click', ()=>{
+  linkGatitos.addEventListener ('click', ()=>{
       cardGatitos.style.display = "flex";
       cardPerritos.style.display = "none";
       cardSpiderMan.style.display = "none";
       cardAvengers.style.display = "none";
       cardAmor.style.display = "none";
     })
-  }
+
 
   //Secciòn perritos
 
-  const ferchAPerritos = () =>{
+ /*  const ferchAPerritos = () =>{
     fetch (`https://api.giphy.com/v1/gifs/search?api_key=766uz6yWVGCfNJT8GXBCq9q7N4q96tms&q=perros`)
     .then((res) => res.json())
     .then((data) => {
@@ -113,15 +112,13 @@ const gatitosAHtml = (data) =>{
       return reduceADataPerritos;
     }
   
-    const llamandoBusquedaPerritos = () =>{
-      linkPerritos.addEventListener ('click', ()=>{
+    linkPerritos.addEventListener ('click', ()=>{
         cardGatitos.style.display = "none";
         cardPerritos.style.display = "flex";
         cardSpiderMan.style.display = "none";
         cardAvengers.style.display = "none";
         cardAmor.style.display = "none";
       })
-    }
 
     //Secciòn Spider Man
 
@@ -147,15 +144,14 @@ const gatitosAHtml = (data) =>{
         return reduceADataASpiderMan;
       }
     
-      const llamandoBusquedaSpiderMan = () =>{
-        linkSpiderMan.addEventListener ('click', ()=>{
+      linkSpiderMan.addEventListener ('click', ()=>{
           cardGatitos.style.display = "none";
           cardPerritos.style.display = "none";
           cardSpiderMan.style.display = "flex";
           cardAvengers.style.display = "none";
           cardAmor.style.display = "none";
         })
-      }
+      
     
 
   //Secciòn Avengers
@@ -182,15 +178,14 @@ const gatitosAHtml = (data) =>{
       return reduceADataAvengers;
     }
   
-    const llamandoBusquedaAvengers = () =>{
-      linkAvengers.addEventListener ('click', ()=>{
+    linkAvengers.addEventListener ('click', ()=>{
         cardGatitos.style.display = "none";
         cardPerritos.style.display = "none";
         cardSpiderMan.style.display = "none";
         cardAvengers.style.display = "flex";
         cardAmor.style.display = "none";
       })
-    }
+    
   
 
   //Secciòn Amor
@@ -217,21 +212,20 @@ const gatitosAHtml = (data) =>{
       return reduceADataAmor;
     }
   
-    const llamandoBusquedaAmor = () =>{
-      linkAmor.addEventListener ('click', ()=>{
+    linkAmor.addEventListener ('click', ()=>{
         cardGatitos.style.display = "none";
         cardPerritos.style.display = "none";
         cardSpiderMan.style.display = "none";
         cardAvengers.style.display = "none";
         cardAmor.style.display = "flex";
       })
-    }
+    
   
 
 
 
 
-
+ */
 
 /*  fetch (`https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=gift`)
    .then((res) => res.json())
