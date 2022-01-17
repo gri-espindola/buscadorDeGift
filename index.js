@@ -11,7 +11,7 @@ const linkSpiderMan = document.querySelector(".link-spiderman");
 const linkAvengers = document.querySelector(".link-avengers");
 const linkAmor = document.querySelector(".link-amor");
 const cardGatitos= document.querySelector(".card-gatitos");
-const cardPerritos = document.querySelector(".card- perritos");
+const cardPerritos = document.querySelector(".card-perritos");
 const cardSpiderMan = document.querySelector(".card-spiderman");
 const cardAvengers = document.querySelector(".card-avengers");
 const cardAmor = document.querySelector(".card-amor");
@@ -48,13 +48,13 @@ formBusquedaGif.onsubmit = (e) =>{
 } 
 
 //Sección Busquedas populares
-/* 
+
 cardGatitos.style.display = "none";
 cardPerritos.style.display = "none";
 cardSpiderMan.style.display = "none";
 cardAvengers.style.display = "none";
 cardAmor.style.display = "none";
- */
+
 //Sección gatitos
 
 const ferchAGatitos = () =>{
@@ -63,7 +63,7 @@ const ferchAGatitos = () =>{
   .then((data) => {
   console.log (data)
   
-  linkGatitos.innerHTML = gatitosAHtml (data.data)
+  cardGatitos.innerHTML = gatitosAHtml (data.data)
 })
 }
 const gatitosAHtml = (data) =>{
@@ -71,9 +71,7 @@ const gatitosAHtml = (data) =>{
   const reduceADataGatitos = data.reduce ((acc,curr) =>{ 
 
     return acc + `
-    <article class="card-gatitos">
     <img class="img-gift" src="${curr.images.fixed_height.url}" alt="Resultado de la busqueda">
-    </article>
     `
   },"")
     return reduceADataGatitos;
@@ -85,18 +83,19 @@ const gatitosAHtml = (data) =>{
       cardSpiderMan.style.display = "none";
       cardAvengers.style.display = "none";
       cardAmor.style.display = "none";
+      ferchAGatitos();
     })
 
 
   //Secciòn perritos
 
- /*  const ferchAPerritos = () =>{
+   const ferchAPerritos = () =>{
     fetch (`https://api.giphy.com/v1/gifs/search?api_key=766uz6yWVGCfNJT8GXBCq9q7N4q96tms&q=perros`)
     .then((res) => res.json())
     .then((data) => {
     console.log (data)
     
-    linkPerritos.innerHTML = perritosAHtml (data.data)
+    cardPerritos.innerHTML = perritosAHtml (data.data)
   })
   }
   const perritosAHtml = (data) =>{
@@ -104,9 +103,8 @@ const gatitosAHtml = (data) =>{
     const reduceADataPerritos = data.reduce ((acc,curr) =>{ 
   
       return acc + `
-      <article class="card-perritos">
+  
       <img class="img-gift" src="${curr.images.fixed_height.url}" alt="Resultado de la busqueda">
-      </article>
       `
     },"")
       return reduceADataPerritos;
@@ -118,6 +116,7 @@ const gatitosAHtml = (data) =>{
         cardSpiderMan.style.display = "none";
         cardAvengers.style.display = "none";
         cardAmor.style.display = "none";
+        ferchAPerritos();
       })
 
     //Secciòn Spider Man
@@ -128,7 +127,7 @@ const gatitosAHtml = (data) =>{
       .then((data) => {
       console.log (data)
       
-      linkSpiderMan.innerHTML = SpiderManAHtml (data.data)
+      cardSpiderMan.innerHTML = SpiderManAHtml (data.data)
     })
     }
     const SpiderManAHtml = (data) =>{
@@ -136,9 +135,7 @@ const gatitosAHtml = (data) =>{
       const reduceADataASpiderMan = data.reduce ((acc,curr) =>{ 
     
         return acc + `
-        <article class="card-spiderman">
         <img class="img-gift" src="${curr.images.fixed_height.url}" alt="Resultado de la busqueda">
-        </article>
         `
       },"")
         return reduceADataASpiderMan;
@@ -150,6 +147,7 @@ const gatitosAHtml = (data) =>{
           cardSpiderMan.style.display = "flex";
           cardAvengers.style.display = "none";
           cardAmor.style.display = "none";
+          ferchASpiderMan();
         })
       
     
@@ -162,17 +160,15 @@ const gatitosAHtml = (data) =>{
     .then((data) => {
     console.log (data)
     
-    linkAvengers.innerHTML = avengersAHtml (data.data)
+    cardAvengers.innerHTML = avengersAHtml (data.data)
   })
   }
-  const AvengersAHtml = (data) =>{
+  const avengersAHtml = (data) =>{
     
     const reduceADataAvengers = data.reduce ((acc,curr) =>{ 
   
       return acc + `
-      <article class="card-avengers">
       <img class="img-gift" src="${curr.images.fixed_height.url}" alt="Resultado de la busqueda">
-      </article>
       `
     },"")
       return reduceADataAvengers;
@@ -184,11 +180,12 @@ const gatitosAHtml = (data) =>{
         cardSpiderMan.style.display = "none";
         cardAvengers.style.display = "flex";
         cardAmor.style.display = "none";
+        ferchAAvengers();
       })
     
   
 
-  //Secciòn Amor
+  //Sección Amor
 
   const ferchAAmor = () =>{
     fetch (`https://api.giphy.com/v1/gifs/search?api_key=766uz6yWVGCfNJT8GXBCq9q7N4q96tms&q=gatos`)
@@ -196,7 +193,7 @@ const gatitosAHtml = (data) =>{
     .then((data) => {
     console.log (data)
     
-    linkAmor.innerHTML = amorAHtml (data.data)
+    cardAmor.innerHTML = amorAHtml (data.data)
   })
   }
   const amorAHtml = (data) =>{
@@ -204,9 +201,7 @@ const gatitosAHtml = (data) =>{
     const reduceADataAmor = data.reduce ((acc,curr) =>{ 
   
       return acc + `
-      <article class="card-amor">
       <img class="img-gift" src="${curr.images.fixed_height.url}" alt="Resultado de la busqueda">
-      </article>
       `
     },"")
       return reduceADataAmor;
@@ -218,6 +213,7 @@ const gatitosAHtml = (data) =>{
         cardSpiderMan.style.display = "none";
         cardAvengers.style.display = "none";
         cardAmor.style.display = "flex";
+        ferchAAmor();
       })
     
   
@@ -225,7 +221,7 @@ const gatitosAHtml = (data) =>{
 
 
 
- */
+
 
 /*  fetch (`https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=gift`)
    .then((res) => res.json())

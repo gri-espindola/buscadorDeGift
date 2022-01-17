@@ -125,10 +125,22 @@ body {
             }
         }
     }
+    .card-populares{
+        margin: 10px;
+        padding: 10px;
+        align-items: center;
+        border: 2px solid black;
+        border-radius: 7px;
+        background-color: plum;
+        .img-gift{
+            width: 300px;
+            height: 200px;
+        }
+    }
 }
 
 
-.container-gift {
+.container-gif {
     display: flex;  
     align-items: center;
     justify-content: space-evenly;
@@ -137,20 +149,16 @@ body {
     padding: 40px;
 }
 
-.gift-card {
-    margin: 10px;
-    padding: 10px;
-    align-items: center;
-    border: 2px solid black;
-    border-radius: 7px;
-    background-color: plum;
-    .titulo-card{
-        font-size: 15px;
-        font-family: $tipografia-card;
-    }
-    .img-gift{
-        width: 300px;
-        height: 200px;
-    }
-}
+    .gift-card {
+        margin: 10px;
+        padding: 10px;
+        align-items: center;
+        border: 2px solid black;
+        border-radius: 7px;
+        background-color: plum;
+        .img-gift{
+            width: 300px;
+            height: 200px;
+        }
+    }   
 
