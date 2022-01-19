@@ -126,17 +126,20 @@ body {
         }
     }
     .card-populares{
-        margin: 10px;
-        padding: 10px;
+        flex-wrap: wrap;
         align-items: center;
-        border: 2px solid black;
-        border-radius: 7px;
-        background-color: plum;
+        justify-content: center;
         .img-gift{
             width: 300px;
             height: 200px;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 7px;
+            background-color: plum;
+            
         }
-    }
+
 }
 
 
@@ -162,3 +165,4 @@ body {
         }
     }   
 
+}

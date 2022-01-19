@@ -4,7 +4,7 @@ const API_KEY = "766uz6yWVGCfNJT8GXBCq9q7N4q96tms";
 const inputBuscador = document.getElementById ("input-buscador");
 const buscador = document.getElementById ("buscador");
 let valueInputBusqueda = "";
-const giftBuscado = document.getElementById("gif-buscado");
+const gifBuscado = document.getElementById("gif-buscado");
 const linkGatitos = document.querySelector(".link-gatitos");
 const linkPerritos = document.querySelector(".link-perritos");
 const linkSpiderMan = document.querySelector(".link-spiderman");
@@ -24,7 +24,7 @@ const buscarGif = () =>{
   fetch (`https://api.giphy.com/v1/gifs/search?api_key=766uz6yWVGCfNJT8GXBCq9q7N4q96tms&q=${valueInputBusqueda}`)
   .then((res) => res.json())
   .then((data) => {
-  giftBuscado.innerHTML = gifAHtml (data.data)
+  gifBuscado.innerHTML = gifAHtml (data.data)
 })
 }
  
@@ -46,6 +46,18 @@ formBusquedaGif.onsubmit = (e) =>{
   valueInputBusqueda = inputBuscador.value; 
   buscarGif();
 } 
+
+
+// Contador
+
+const buscarGif = () =>{
+  fetch (`https://api.giphy.com/v1/gifs/search?api_key=766uz6yWVGCfNJT8GXBCq9q7N4q96tms&q=${valueInputBusqueda}`)
+  .then((res) => res.json())
+  .then((data) => {
+  gifBuscado.innerHTML = gifAHtml (data.data)
+})
+}
+
 
 //Sección Busquedas populares
 
@@ -83,6 +95,7 @@ const gatitosAHtml = (data) =>{
       cardSpiderMan.style.display = "none";
       cardAvengers.style.display = "none";
       cardAmor.style.display = "none";
+      gifBuscado.style.display = "none";
       ferchAGatitos();
     })
 
@@ -116,6 +129,7 @@ const gatitosAHtml = (data) =>{
         cardSpiderMan.style.display = "none";
         cardAvengers.style.display = "none";
         cardAmor.style.display = "none";
+        gifBuscado.style.display = "none";
         ferchAPerritos();
       })
 
@@ -146,7 +160,8 @@ const gatitosAHtml = (data) =>{
           cardPerritos.style.display = "none";
           cardSpiderMan.style.display = "flex";
           cardAvengers.style.display = "none";
-          cardAmor.style.display = "none";
+          cardAmor.style.display= "none";         
+          gifBuscado.style.display = "none";
           ferchASpiderMan();
         })
       
@@ -180,6 +195,7 @@ const gatitosAHtml = (data) =>{
         cardSpiderMan.style.display = "none";
         cardAvengers.style.display = "flex";
         cardAmor.style.display = "none";
+        gifBuscado.style.display = "none";
         ferchAAvengers();
       })
     
@@ -188,7 +204,7 @@ const gatitosAHtml = (data) =>{
   //Sección Amor
 
   const ferchAAmor = () =>{
-    fetch (`https://api.giphy.com/v1/gifs/search?api_key=766uz6yWVGCfNJT8GXBCq9q7N4q96tms&q=gatos`)
+    fetch (`https://api.giphy.com/v1/gifs/search?api_key=766uz6yWVGCfNJT8GXBCq9q7N4q96tms&q=love`)
     .then((res) => res.json())
     .then((data) => {
     console.log (data)
@@ -213,6 +229,7 @@ const gatitosAHtml = (data) =>{
         cardSpiderMan.style.display = "none";
         cardAvengers.style.display = "none";
         cardAmor.style.display = "flex";
+        gifBuscado.style.display = "none";
         ferchAAmor();
       })
     

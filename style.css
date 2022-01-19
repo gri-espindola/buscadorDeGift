@@ -109,19 +109,20 @@ body {
   font-size: 20px;
 }
 .section-busquedas-populares .card-populares {
-  margin: 10px;
-  padding: 10px;
+  flex-wrap: wrap;
   align-items: center;
-  border: 2px solid black;
-  border-radius: 7px;
-  background-color: plum;
+  justify-content: center;
 }
 .section-busquedas-populares .card-populares .img-gift {
   width: 300px;
   height: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 7px;
+  background-color: plum;
 }
-
-.container-gif {
+.section-busquedas-populares .container-gif {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -129,8 +130,7 @@ body {
   background-color: #FBDFEB;
   padding: 40px;
 }
-
-.gift-card {
+.section-busquedas-populares .gift-card {
   margin: 10px;
   padding: 10px;
   align-items: center;
@@ -138,7 +138,7 @@ body {
   border-radius: 7px;
   background-color: plum;
 }
-.gift-card .img-gift {
+.section-busquedas-populares .gift-card .img-gift {
   width: 300px;
   height: 200px;
 }
