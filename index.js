@@ -15,7 +15,7 @@ const cardPerritos = document.querySelector(".card-perritos");
 const cardSpiderMan = document.querySelector(".card-spiderman");
 const cardAvengers = document.querySelector(".card-avengers");
 const cardAmor = document.querySelector(".card-amor");
-
+const gifContador = document.getElementById("gif-contador");
 
 
 //BUSCADOR
@@ -25,6 +25,7 @@ const buscarGif = () =>{
   .then((res) => res.json())
   .then((data) => {
   gifBuscado.innerHTML = gifAHtml (data.data)
+  gifContador.innerHTML = contadorGifAHtml (data)
 })
 }
  
@@ -44,20 +45,25 @@ const buscarGif = () =>{
 formBusquedaGif.onsubmit = (e) =>{
   e.preventDefault()
   valueInputBusqueda = inputBuscador.value; 
-  buscarGif();
+  buscarGif(valueInputBusqueda);
 } 
 
 
 // Contador
 
-const buscarGif = () =>{
-  fetch (`https://api.giphy.com/v1/gifs/search?api_key=766uz6yWVGCfNJT8GXBCq9q7N4q96tms&q=${valueInputBusqueda}`)
-  .then((res) => res.json())
-  .then((data) => {
-  gifBuscado.innerHTML = gifAHtml (data.data)
-})
-}
+// const contadorGif = () =>{
+//   fetch (`https://api.giphy.com/v1/gifs/search?api_key=766uz6yWVGCfNJT8GXBCq9q7N4q96tms&q=${busqueda}`)
+//   .then((res) => res.json())
+//   .then((data) => {
+//   gifContador.innerHTML = contadorGifAHtml (data.data)
+// })
+// }
 
+const contadorGifAHtml = (data) =>{
+
+  return `<p class=" gif-count" src="${data.pagination.total_count}"></p>`;
+
+}
 
 //Sección Busquedas populares
 
