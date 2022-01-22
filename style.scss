@@ -6,6 +6,7 @@ $color-input: white;
 $color-fondo-neutral: #FBDFEB;
 $imagen-intro: url(./imagenes/nubesPink.jpg);
 $imagen-busquedas-populares: url(./imagenes/giftGamer.gif);
+$color-card: plum; 
 
 body {
     box-sizing: border-box;
@@ -120,6 +121,9 @@ body {
         padding: 30px 60px 30px 60px;
             .link-busqueda{    
             text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            background-color: #c5dbea;
             font-family: $tipografia-card;
             font-size: 20px;
             }
@@ -136,12 +140,13 @@ body {
             padding: 10px;
             border: 2px solid black;
             border-radius: 7px;
-            background-color: plum;
+            background-color: $color-card ;
             
         }
 
 }
 
+}
 
 .container-gif {
     display: flex;  
@@ -149,8 +154,7 @@ body {
     justify-content: space-evenly;
     flex-wrap: wrap;
     background-color: $color-fondo-neutral;
-    padding: 40px;
-}
+    padding: 20px;
 
     .gift-card {
         margin: 10px;
@@ -158,11 +162,19 @@ body {
         align-items: center;
         border: 2px solid black;
         border-radius: 7px;
-        background-color: plum;
+        background-color: $color-card;
         .img-gift{
             width: 300px;
             height: 200px;
         }
     }   
+}
 
+.gif-contador{
+    display: flex;
+    justify-content: right;
+    padding-right: 25px;
+    font-family: $tipografia-general;
+    font-size: 20px;
+    background-color: $color-fondo-neutral;
 }

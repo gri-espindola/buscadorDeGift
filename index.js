@@ -51,17 +51,9 @@ formBusquedaGif.onsubmit = (e) =>{
 
 // Contador
 
-// const contadorGif = () =>{
-//   fetch (`https://api.giphy.com/v1/gifs/search?api_key=766uz6yWVGCfNJT8GXBCq9q7N4q96tms&q=${busqueda}`)
-//   .then((res) => res.json())
-//   .then((data) => {
-//   gifContador.innerHTML = contadorGifAHtml (data.data)
-// })
-// }
-
 const contadorGifAHtml = (data) =>{
 
-  return `<p class=" gif-count" src="${data.pagination.total_count}"></p>`;
+  return `<p class=" gif-count">Total de la búsqueda: ${data.pagination.total_count}</p>`;
 
 }
 
