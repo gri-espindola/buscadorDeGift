@@ -44,8 +44,15 @@ const buscarGif = () =>{
 
 formBusquedaGif.onsubmit = (e) =>{
   e.preventDefault()
+  cardGatitos.style.display = "none";
+  cardPerritos.style.display = "none";
+  cardSpiderMan.style.display = "none";
+  cardAvengers.style.display = "none";
+  cardAmor.style.display = "none";
+  gifBuscado.style.display = "flex";
   valueInputBusqueda = inputBuscador.value; 
   buscarGif(valueInputBusqueda);
+
 } 
 
 
