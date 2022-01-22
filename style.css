@@ -116,6 +116,12 @@ body {
   align-items: center;
   justify-content: center;
 }
+.section-busquedas-populares .card-populares #favoritos {
+  display: flex;
+  color: #c60055;
+  font-size: 5px;
+  justify-content: left;
+}
 .section-busquedas-populares .card-populares .img-gift {
   width: 300px;
   height: 200px;
@@ -154,6 +160,39 @@ body {
   font-family: raleway;
   font-size: 20px;
   background-color: #FBDFEB;
+}
+
+@media (max-width: 810px) {
+  .div-introduccion .nav-bar .nav-logo {
+    margin: 0px;
+  }
+  .div-introduccion .nav-bar .nav-logo .imagen-logo {
+    width: 70px;
+  }
+  .div-introduccion .p-introduccion {
+    font-size: 25px;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+  }
+
+  .formulario-de-busqueda .box-busqueda #nav-icon {
+    padding-right: 5px;
+  }
+  .formulario-de-busqueda .box-busqueda .input-busqueda {
+    width: 60vw;
+    height: 6vh;
+  }
+  .formulario-de-busqueda .boton-buscar {
+    width: 18%;
+  }
+}
+.section-busquedas-populares .box-opciones-populares {
+  flex-wrap: wrap;
+  align-items: center;
+}
+.section-busquedas-populares .box-opciones-populares .populares {
+  padding: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
