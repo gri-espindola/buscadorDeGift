@@ -35,6 +35,7 @@ const buscarGif = () =>{
 
     return acc + `
     <article class="gift-card">
+    <i class="fas fa-heart" id="favoritos"></i>
     <img class="img-gift" src="${curr.images.fixed_height.url}" alt="Resultado de la busqueda">
     </article>
     `
