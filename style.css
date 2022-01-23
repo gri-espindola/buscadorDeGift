@@ -190,6 +190,8 @@ body {
   .formulario-de-busqueda .box-busqueda .input-busqueda {
     width: 60vw;
     height: 6vh;
+    font-size: 11px;
+    outline: none;
   }
   .formulario-de-busqueda .boton-buscar {
     width: 18%;
