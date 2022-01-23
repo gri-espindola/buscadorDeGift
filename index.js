@@ -35,7 +35,6 @@ const buscarGif = () =>{
 
     return acc + `
     <article class="gift-card">
-    <i class="fas fa-heart" id="favoritos"></i>
     <img class="img-gift" src="${curr.images.fixed_height.url}" alt="Resultado de la busqueda">
     </article>
     `
@@ -79,7 +78,6 @@ const ferchAGatitos = () =>{
   fetch (`https://api.giphy.com/v1/gifs/search?api_key=766uz6yWVGCfNJT8GXBCq9q7N4q96tms&q=gatos`)
   .then((res) => res.json())
   .then((data) => {
-  console.log (data)
   
   cardGatitos.innerHTML = gatitosAHtml (data.data)
 })
@@ -113,7 +111,6 @@ const gatitosAHtml = (data) =>{
     fetch (`https://api.giphy.com/v1/gifs/search?api_key=766uz6yWVGCfNJT8GXBCq9q7N4q96tms&q=perros`)
     .then((res) => res.json())
     .then((data) => {
-    console.log (data)
     
     cardPerritos.innerHTML = perritosAHtml (data.data)
   })
@@ -147,7 +144,6 @@ const gatitosAHtml = (data) =>{
       fetch (`https://api.giphy.com/v1/gifs/search?api_key=766uz6yWVGCfNJT8GXBCq9q7N4q96tms&q=spiderman`)
       .then((res) => res.json())
       .then((data) => {
-      console.log (data)
       
       cardSpiderMan.innerHTML = SpiderManAHtml (data.data)
     })
@@ -182,8 +178,7 @@ const gatitosAHtml = (data) =>{
     fetch (`https://api.giphy.com/v1/gifs/search?api_key=766uz6yWVGCfNJT8GXBCq9q7N4q96tms&q=avengers`)
     .then((res) => res.json())
     .then((data) => {
-    console.log (data)
-    
+  
     cardAvengers.innerHTML = avengersAHtml (data.data)
   })
   }
@@ -217,7 +212,6 @@ const gatitosAHtml = (data) =>{
     fetch (`https://api.giphy.com/v1/gifs/search?api_key=766uz6yWVGCfNJT8GXBCq9q7N4q96tms&q=love`)
     .then((res) => res.json())
     .then((data) => {
-    console.log (data)
     
     cardAmor.innerHTML = amorAHtml (data.data)
   })
@@ -250,23 +244,3 @@ const gatitosAHtml = (data) =>{
 
 
 
-
-/*  fetch (`https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=gift`)
-   .then((res) => res.json())
-   .then((data) => {
-     console.log (data)
-    crearTarjetasGift (data.data) 
-})
-
-const crearTarjetasGif = (data) =>{
-  const gift = document.getElementById("gift")
-  const htmlGift = data.reduce ((acc,curr,index) =>{  
-    return acc + `
-  <article class="gift-card">
-  <img class="img-gift" src="${data[index].images.fixed_height.url}" alt="gift">
-  </article>
-  `
-  },"")
-
-  gift.innerHTML = htmlGift
-} */

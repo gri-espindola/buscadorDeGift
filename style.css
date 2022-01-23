@@ -116,12 +116,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-.section-busquedas-populares .card-populares #favoritos {
-  display: flex;
-  color: #c60055;
-  font-size: 5px;
-  justify-content: left;
-}
 .section-busquedas-populares .card-populares .img-gift {
   width: 300px;
   height: 200px;
@@ -162,6 +156,20 @@ body {
   background-color: #FBDFEB;
 }
 
+.footer-presentacion {
+  display: flex;
+  background-image: url(./imagenes/nubesPink.jpg);
+  width: 100%;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+.footer-presentacion .p-footer {
+  display: flex;
+  font-family: comfortaa;
+  font-size: 20px;
+}
+
 @media (max-width: 810px) {
   .div-introduccion .nav-bar .nav-logo {
     margin: 0px;
@@ -193,6 +201,10 @@ body {
 }
 .section-busquedas-populares .box-opciones-populares .populares {
   padding: 5px;
+}
+
+.footer-presentacion .p-footer {
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */
