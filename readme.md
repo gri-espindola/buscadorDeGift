@@ -16,4 +16,4 @@ Este debería ser el resultado final de tu instalación.
 ![imagen](./imagenes/proyecto.png)
 
 
-#### De *Gri* con ❤ Para todo el 🌍 
+#### De *Gri* con ❤ Para todo el Mundo.🌍 
