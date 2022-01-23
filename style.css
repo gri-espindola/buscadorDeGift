@@ -203,6 +203,13 @@ body {
   padding: 5px;
 }
 
+.container-gif {
+  padding: 0px;
+}
+.container-gif .gif-contador {
+  font-size: 16px;
+}
+
 .footer-presentacion .p-footer {
   font-size: 12px;
 }
