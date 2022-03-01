@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
     integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <!-- No es necesario repetir los link de google fonts. Los siguientes dos solo se tienen que poner una sola vez.  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
@@ -16,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+        <!-- debe estar en la carpeta principal, no en img, llamarse favicon.ico, y el link asi:
+    <link rel="icon" type="image/ico" href="favicon.ico"> -->
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😎</text></svg>" />
     <link rel="stylesheet" href="./style.css">
@@ -25,11 +28,14 @@
     <div class="div-introduccion">
         <nav class="nav-bar">
             <figure class="nav-logo">
+                No es necesario aclarar "imagen de" en el alt
                 <img src="./imagenes/Logo.png" alt="Imagen del logo" class="imagen-logo">
             </figure>
             <div class="nav-opciones">
+                <!-- No uses b, el estilado es tarea de css, no de html -->
                 <b>
                     <a href="https://silly-saha-ca575b.netlify.app/" class="opciones">Inicio</a>
+                    <!-- No dejes codigo comentado en una entrega -->
                     <!-- <a href="" class="opciones">Favoritos</a> -->
                 </b>   
             </div>
@@ -44,6 +50,7 @@
     <form action="" id="form-busqueda-gif" class="formulario-de-busqueda">
         <div class="box-busqueda">
             <i class="fas fa-search" id="nav-icon"></i>
+            <!-- Si el input no tiene label, debe tener aria-label -->
             <input type="text" id="input-buscador" placeholder="Introduce un término de búsqueda" class="input-busqueda">
         </div>
         <input type="submit" id="buscador" class="boton-buscar" value="buscar"></input>
