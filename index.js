@@ -1,8 +1,12 @@
+// nunca usas esta variable
 const container = document.getElementById("container");
 const formBusquedaGif = document.getElementById ("form-busqueda-gif")
+// nunca usas esta variable. deberia ir al final de las variables del dom. 
 const API_KEY = "766uz6yWVGCfNJT8GXBCq9q7N4q96tms";
 const inputBuscador = document.getElementById ("input-buscador");
+// nunca usas esta variable
 const buscador = document.getElementById ("buscador");
+// esta tendria que ir debajo de todas las variables del dom
 let valueInputBusqueda = "";
 const gifBuscado = document.getElementById("gif-buscado");
 const linkGatitos = document.querySelector(".link-gatitos");
@@ -24,6 +28,7 @@ const buscarGif = () =>{
   fetch (`https://api.giphy.com/v1/gifs/search?api_key=766uz6yWVGCfNJT8GXBCq9q7N4q96tms&q=${valueInputBusqueda}`)
   .then((res) => res.json())
   .then((data) => {
+    // ojo con el tabulado, el codigo siguiente deberia estar a la misma altura que mi comentario
   gifBuscado.innerHTML = gifAHtml (data.data)
   gifContador.innerHTML = contadorGifAHtml (data)
 })
@@ -51,6 +56,7 @@ formBusquedaGif.onsubmit = (e) =>{
   cardAmor.style.display = "none";
   gifBuscado.style.display = "flex";
   valueInputBusqueda = inputBuscador.value; 
+  // envias el parametro, pero la funcion buscarGif no lo esta recibiendo
   buscarGif(valueInputBusqueda);
 
 } 
@@ -106,7 +112,8 @@ const gatitosAHtml = (data) =>{
 
 
   //Secciòn perritos
-
+// fetch, no ferch. estos errores son detalles cuando trabajas sola pero pueden confundir mucho a 
+// tus compañeros de equipo
    const ferchAPerritos = () =>{
     fetch (`https://api.giphy.com/v1/gifs/search?api_key=766uz6yWVGCfNJT8GXBCq9q7N4q96tms&q=perros`)
     .then((res) => res.json())
@@ -126,7 +133,7 @@ const gatitosAHtml = (data) =>{
     },"")
       return reduceADataPerritos;
     }
-  
+  // ojo con el tabulado!!
     linkPerritos.addEventListener ('click', ()=>{
         cardGatitos.style.display = "none";
         cardPerritos.style.display = "flex";
@@ -240,7 +247,23 @@ const gatitosAHtml = (data) =>{
     
   
 
-
-
-
-
+// Seria ideal que pudieramos hacer una sola funcion que se ocupe de todos los fetch recomendados, 
+// No voy a dejartela escrita pero si darte algunas puntas para encararla, y te lo dejo como desafio
+// Empezamos por los onclick, que van a llamar todos a la misma funcion: 
+// linkGatitos.addEventListener('click', () => {
+//   fetchRecomendados("gatos");
+// })
+// linkGatitos.addEventListener('click', () => {
+//   fetchRecomendados("perros");
+// })
+// linkGatitos.addEventListener('click', () => {
+//   fetchRecomendados("avengers");
+// })
+// linkGatitos.addEventListener('click', () => {
+//   fetchRecomendados("spiderman");
+// })
+// linkGatitos.addEventListener('click', () => {
+//   fetchRecomendados("love");
+// })
+// La funcion "fetchRecomendados" va a recibir ese parametro e interpolarlo en el fetch, despues de la "q="
+// Despues de recibir la data y hacer el html, haces un if para decidir de acuerdo al parametro, que secciones mostrar. ç
